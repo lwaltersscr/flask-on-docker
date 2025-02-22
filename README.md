@@ -9,7 +9,7 @@ This repository contains a fully Dockerized Flask web application integrated wit
   - Gunicorn & Nginx: Production-ready server with reverse proxy setup.
   - Media & Static Files: User-uploaded media handled securely with Nginx.
 
-## Screenshot (Animated GIF)
+## Example image ulpoad
 
 ![hippo](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenBwa2w5aDlweTZyaXd2dng1b3ZtaDhnbXFtdXQyZG16ajk2cmRvYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mhoKQ4AWWLG3c0ha3p/giphy.gif)
 
@@ -40,16 +40,16 @@ This repository contains a fully Dockerized Flask web application integrated wit
            POSTGRES_PASSWORD=hello_flask
            POSTGRES_DB=hello_flask_prod
 3. Build and run in development mode: docker-compose up -d --build
-    • Access the app at: http://localhost:1033/
-    • Test static files at: http://localhost:1033/static/hello.txt
-4. Build and run in production mode:
-    • docker-compose -f docker-compose.prod.yml down -v
-    • docker-compose -f docker-compose.prod.yml up -d --build
-    • docker-compose -f docker-compose.prod.yml exec web python manage.py create_db
-    • docker-compose -f docker-compose.prod.yml up -d --build
-    • Access the production app at: http://localhost:1033/
-5. Test media upload: http://localhost:1033/upload
-6. View the uploaded media file: http://localhost:1033/media/IMAGE_FILE_NAME
-7. To stop containers:
-    • docker-compose down -v
-    • docker-compose -f docker-compose.prod.yml down -v
+     - Access the app at: http://localhost:1033/
+     - Test static files at: http://localhost:1033/static/hello.txt
+5. Build and run in production mode:
+     - docker-compose -f docker-compose.prod.yml down -v
+     - docker-compose -f docker-compose.prod.yml up -d --build
+     - docker-compose -f docker-compose.prod.yml exec web python manage.py create_db
+     - docker-compose -f docker-compose.prod.yml up -d --build
+     - Access the production app at: http://localhost:1033/
+7. Test media upload: http://localhost:1033/upload
+8. View the uploaded media file: http://localhost:1033/media/IMAGE_FILE_NAME
+9. To stop containers:
+      - docker-compose down -v
+      - docker-compose -f docker-compose.prod.yml down -v
