@@ -1,0 +1,31 @@
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Environment variables (Sensitive data)
+.env*
+!.env.dev  # Allow .env.dev but ignore others like .env.prod and .env.prod.db
+.env.prod
+.env.prod.db
+.env  # Ignore any generic .env files
+
+# Docker-related
+*.pid
+*.log
+docker-compose.override.yml
+
+# Database storage
+postgres_data/
+flask-on-docker_postgres_data/
+
+# PyCharm or VSCode config (if you use an IDE)
+.vscode/
+.idea/
+
+# Mac OS files
+.DS_Store
+
