@@ -30,22 +30,22 @@ This repository contains a fully Dockerized Flask web application integrated wit
         APP_FOLDER=/usr/src/app
       ```
      - .env.prod (Production)
-         ```
-         FLASK_APP=project/__init__.py
-         FLASK_DEBUG=0
-         DATABASE_URL=postgresql://hello_flask:hello_flask@db:5432/hello_flask_prod
-         SQL_HOST=db
-         SQL_PORT=5432
-         DATABASE=postgres
-         APP_FOLDER=/home/app/web
-         ```
+       ```
+       FLASK_APP=project/__init__.py
+       FLASK_DEBUG=0
+       DATABASE_URL=postgresql://hello_flask:hello_flask@db:5432/hello_flask_prod
+       SQL_HOST=db
+       SQL_PORT=5432
+       DATABASE=postgres
+       APP_FOLDER=/home/app/web
+       ```
       - .env.prod.db (Database - Production) --  Ensure these files are in .gitignore to avoid uploading sensitive credentials.
         ```
-        POSTGRES_USER=hello_flask
-        POSTGRES_PASSWORD=hello_flask
-        POSTGRES_DB=hello_flask_prod
+       POSTGRES_USER=hello_flask
+       POSTGRES_PASSWORD=hello_flask
+       POSTGRES_DB=hello_flask_prod
       ```
-3. Build and run in development mode: docker-compose up -d --build
+4. Build and run in development mode: docker-compose up -d --build
      - Access the app at: http://localhost:1033/
      - Test static files at: http://localhost:1033/static/hello.txt
 5. Build and run in production mode:
