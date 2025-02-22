@@ -4,11 +4,10 @@
 This repository contains a fully Dockerized Flask web application integrated with PostgreSQL, Gunicorn, and Nginx. The web service allows users to upload images, which are then served from a secure media directory. The project is structured for both development and production environments, following best practices for containerization, database management, and web server configuration. This repository demonstrates a real-world deployment pipeline, making it a solid project for showcasing full-stack deployment skills.
 
 ## Project Highlights
-
-  • Dockerized: Separate configurations for development and production.
-  • PostgreSQL Integration: Persistent data storage using Docker volumes.
-  • Gunicorn & Nginx: Production-ready server with reverse proxy setup.
-  • Media & Static Files: User-uploaded media handled securely with Nginx.
+  - Dockerized: Separate configurations for development and production.
+  - PostgreSQL Integration: Persistent data storage using Docker volumes.
+  - Gunicorn & Nginx: Production-ready server with reverse proxy setup.
+  - Media & Static Files: User-uploaded media handled securely with Nginx.
 
 ## Screenshot (Animated GIF)
 
