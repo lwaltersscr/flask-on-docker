@@ -19,15 +19,18 @@ This repository contains a fully Dockerized Flask web application integrated wit
      git clone https://github.com/your-username/flask-on-docker.git
      cd flask-on-docker
 2. Create the following environment files in the project root:
-     .env.dev (Development)
-           FLASK_APP=project/__init__.py
+     - .env.dev (Development)
+      ```
+       FLASK_APP=project/__init__.py
            FLASK_DEBUG=1
            DATABASE_URL=postgresql://hello_flask:hello_flask@db:5432/hello_flask_dev
            SQL_HOST=db
            SQL_PORT=5432
            DATABASE=postgres
            APP_FOLDER=/usr/src/app
-     .env.prod (Production)
+      ```
+     - .env.prod (Production)
+       ```
            FLASK_APP=project/__init__.py
            FLASK_DEBUG=0
            DATABASE_URL=postgresql://hello_flask:hello_flask@db:5432/hello_flask_prod
@@ -35,10 +38,13 @@ This repository contains a fully Dockerized Flask web application integrated wit
            SQL_PORT=5432
            DATABASE=postgres
            APP_FOLDER=/home/app/web
-     .env.prod.db (Database - Production) --  Ensure these files are in .gitignore to avoid uploading sensitive credentials.
+       ```
+     - .env.prod.db (Database - Production) --  Ensure these files are in .gitignore to avoid uploading sensitive credentials.
+      ```
            POSTGRES_USER=hello_flask
            POSTGRES_PASSWORD=hello_flask
            POSTGRES_DB=hello_flask_prod
+      ```
 3. Build and run in development mode: docker-compose up -d --build
      - Access the app at: http://localhost:1033/
      - Test static files at: http://localhost:1033/static/hello.txt
