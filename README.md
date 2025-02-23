@@ -1,7 +1,7 @@
 # Flask on Docker
 
 ## Overview
-This repository contains a fully Dockerized Flask web application integrated with PostgreSQL, Gunicorn, and Nginx. The web service allows users to upload images, which are then served from a secure media directory. The project is structured for both development and production environments, following best practices for containerization, database management, and web server configuration. This repository demonstrates a real-world deployment pipeline, making it a solid project for showcasing full-stack deployment skills.
+This repository contains a fully Dockerized Flask web application integrated with PostgreSQL, Gunicorn, and Nginx. The web service allows users to upload images, which are then served from a secure media directory. The project is structured for both development and production environments, following best practices for containerization, database management, and web server configuration.
 
 ## Project Highlights
   - Dockerized: Separate configurations for development and production.
