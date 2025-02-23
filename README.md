@@ -10,19 +10,19 @@ This repository contains a fully Dockerized Flask web application integrated wit
 
 ## Build Instructions
 1. Clone the repo
-     git clone https://github.com/your-username/flask-on-docker.git
-     cd flask-on-docker
+     - `git clone https://github.com/your-username/flask-on-docker.git`
+     - `cd flask-on-docker`
 2. Create the following environment files in the project root:
      - .env.dev (Development)
-      ```
-        FLASK_APP=project/__init__.py
-        FLASK_DEBUG=1
-        DATABASE_URL=postgresql://hello_flask:hello_flask@db:5432/hello_flask_dev
-        SQL_HOST=db
-        SQL_PORT=5432
-        DATABASE=postgres
-        APP_FOLDER=/usr/src/app
-      ```
+       ```
+       FLASK_APP=project/__init__.py
+       FLASK_DEBUG=1
+       DATABASE_URL=postgresql://hello_flask:hello_flask@db:5432/hello_flask_dev
+       SQL_HOST=db
+       SQL_PORT=5432
+       DATABASE=postgres
+       APP_FOLDER=/usr/src/app
+       ```
      - .env.prod (Production)
        ```
        FLASK_APP=project/__init__.py
@@ -33,23 +33,23 @@ This repository contains a fully Dockerized Flask web application integrated wit
        DATABASE=postgres
        APP_FOLDER=/home/app/web
        ```
-      - .env.prod.db (Database - Production) --  Ensure these files are in .gitignore to avoid uploading sensitive credentials.
-        ```
+     - .env.prod.db (Database - Production) --  Ensure these files are in .gitignore to avoid uploading sensitive credentials.
+       ```
        POSTGRES_USER=hello_flask
        POSTGRES_PASSWORD=hello_flask
        POSTGRES_DB=hello_flask_prod
-      ```
-4. Build and run in development mode: docker-compose up -d --build
-     - Access the app at: http://localhost:1033/
-     - Test static files at: http://localhost:1033/static/hello.txt
+       ```
+4. Build and run in development mode: `docker-compose up -d --build`
+     - Access the app at: `http://localhost:8080`
+     - Test static files at: `http://localhost:8080/static/hello.txt`
 5. Build and run in production mode:
-     - docker-compose -f docker-compose.prod.yml down -v
-     - docker-compose -f docker-compose.prod.yml up -d --build
-     - docker-compose -f docker-compose.prod.yml exec web python manage.py create_db
-     - docker-compose -f docker-compose.prod.yml up -d --build
-     - Access the production app at: http://localhost:1033/
-7. Test media upload: http://localhost:1033/upload
-8. View the uploaded media file: http://localhost:1033/media/IMAGE_FILE_NAME
+     - `docker-compose -f docker-compose.prod.yml down -v`
+     - `docker-compose -f docker-compose.prod.yml up -d --build`
+     - `docker-compose -f docker-compose.prod.yml exec web python manage.py create_db`
+     - `docker-compose -f docker-compose.prod.yml up -d --build`
+     - Access the production app at: `http://localhost:8080/`
+7. Test media upload: `http://localhost:8080/upload`
+8. View the uploaded media file: `http://localhost:1033/media/IMAGE_FILE_NAME`
 9. To stop containers:
-      - docker-compose down -v
-      - docker-compose -f docker-compose.prod.yml down -v
+      - `docker-compose down -v`
+      - `docker-compose -f docker-compose.prod.yml down -v`
