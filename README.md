@@ -10,8 +10,6 @@ This repository contains a fully Dockerized Flask web application integrated wit
 
 ## Build Instructions
 1. Clone the repo
-     - `git clone https://github.com/your-username/flask-on-docker.git`
-     - `cd flask-on-docker`
 2. Create the following environment files in the project root:
      - .env.dev (Development)
        ```
